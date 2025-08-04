@@ -1,3 +1,12 @@
 address{
     background-color: bisque;
+    border: 2px snow;
+    padding:20px;
+}
+blockquote{
+    border: 2px solid seashell;
+    margin:2cm;
+    padding-left: 2cm;
+    padding-right: 2cm;
+    border-radius: 9999px;
 }
