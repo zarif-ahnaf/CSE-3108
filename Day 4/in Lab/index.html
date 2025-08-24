@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box {
+                width: auto;
+                border: 1px solid black;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+            <div style="display: flex; gap: 10px; width: 100dvw">
+                <div class="box">R</div>
+                <div class="box">G</div>
+                <div class="box">B</div>
+            </div>
+            <div style="display: flex; gap: 10px">
+                <div style="display: flex; flex-direction: column; width: 75px">
+                    <div class="box">R</div>
+                    <div class="box">G</div>
+                </div>
+
+                <div
+                    style="
+                        display: flex;
+                        height: 59px;
+                        justify-items: center;
+                        align-items: center;
+                    "
+                    class="box"
+                >
+                    B
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
