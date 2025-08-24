@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fancy RGB Layout</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #f6f8fa;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+            }
+
+            .container {
+                display: grid;
+                gap: 12px;
+                padding: 20px;
+                border-radius: 16px;
+                background: white;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            /* First row (R, G, B side by side) */
+            .row1 {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+            }
+
+            /* Second row (column of R/G + tall B) */
+            .row2 {
+                display: grid;
+                grid-template-columns: 75px 1fr;
+                gap: 12px;
+                align-items: stretch;
+            }
+
+            .col-stack {
+                display: grid;
+                grid-template-rows: 1fr 1fr; /* equal halves */
+                gap: 12px;
+            }
+
+            .box {
+                padding: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                font-size: 20px;
+                border-radius: 12px;
+                color: white;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .R {
+                background: #e74c3c;
+            }
+            .G {
+                background: #2ecc71;
+            }
+            .B {
+                background: #3498db;
+            }
+
+            .second-blue {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 132px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row1">
+                <div class="box R">R</div>
+                <div class="box G">G</div>
+                <div class="box B">B</div>
+            </div>
+            <div class="row2">
+                <div class="col-stack">
+                    <div class="box R">R</div>
+                    <div class="box G">G</div>
+                </div>
+                <div class="box B second-blue">B</div>
+            </div>
+        </div>
+    </body>
+</html>
