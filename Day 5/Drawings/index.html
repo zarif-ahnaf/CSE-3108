@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Web Lab 5 - Form Example</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f6f6f6;
+                padding: 20px;
+                color: #000;
+            }
+
+            .form-container {
+                background-color: #d4e157; /* light green-yellow */
+                max-width: 400px;
+                margin: auto;
+                padding: 25px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+
+            h2 {
+                margin-top: 20px;
+                font-size: 16px;
+                color: #333;
+            }
+
+            label {
+                display: block;
+                margin-top: 10px;
+                font-weight: bold;
+                font-size: 14px;
+            }
+
+            input[type='text'],
+            input[type='email'],
+            input[type='tel'],
+            textarea {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                border: none;
+                border-radius: 4px;
+                box-sizing: border-box;
+                background: #fff;
+                color: #000;
+            }
+
+            textarea {
+                resize: vertical;
+            }
+
+            .card-types {
+                display: flex;
+                gap: 10px;
+                margin-top: 5px;
+            }
+
+            .card-types label {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-weight: normal;
+            }
+
+            button {
+                margin-top: 20px;
+                width: 100%;
+                padding: 12px;
+                background-color: black;
+                color: white;
+                font-weight: bold;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+            }
+
+            button:hover {
+                background-color: #333;
+            }
+
+         
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <form>
+                <!-- Step 1: Your details -->
+                <h2>Step 1: Your details</h2>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" />
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="example@email.com"
+                />
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="+880" />
+
+                <!-- Step 2: Delivery address -->
+                <h2>Step 2: Delivery address</h2>
+
+                <label for="address">Address</label>
+                <textarea
+                    id="address"
+                    placeholder="Enter your address"
+                ></textarea>
+
+                <label for="postcode">Post code</label>
+                <input type="text" id="postcode" />
+
+                <label for="country">Country</label>
+                <input type="text" id="country" />
+
+                <!-- Step 3: Card details -->
+                <h2>Step 3: Card details</h2>
+
+                <div class="card-types">
+                    <label>
+                        <input type="radio" name="card-type" value="visa" />
+                        VISA
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            name="card-type"
+                            value="mastercard"
+                            checked
+                        />
+                        Mastercard
+                    </label>
+                    <label>
+                        <input type="radio" name="card-type" value="amex" />
+                        AmEx
+                    </label>
+                </div>
+
+                <label for="card-number">Card number</label>
+                <input type="text" id="card-number" />
+
+                <label for="security-code">Security code</label>
+                <input type="text" id="security-code" />
+
+                <label for="card-name">Name on card</label>
+                <input
+                    type="text"
+                    id="card-name"
+                    placeholder="Exact name as on the card"
+                />
+
+                <button type="submit">BUY IT!</button>
+            </form>
+        </div>
+    </body>
+</html>
